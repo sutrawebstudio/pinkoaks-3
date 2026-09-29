@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pink Oaks | 3 & 4 BHK Luxury Boutique Residences in Bani Park, Jaipur</title>
+  <meta name="description" content="18 exclusive 3 & 4 BHK luxury boutique residences in Bani Park, Jaipur with Nahargarh Fort views, 10ft ceilings, Vastu compliance & basement clubhouse. RERA No. RAJ/P/2025/3489.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER / NAVIGATION BAR
+       ========================================================================== -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-group" aria-label="Pink Oaks Jaipur Home">
+        <img src="assets/logo.webp" alt="Pink Oaks Bani Park Jaipur" class="brand-logo-img">
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="address.html" class="nav-link">Address</a></li>
+          <li><a href="residences.html" class="nav-link">Residences</a></li>
+          <li><a href="amenities.html" class="nav-link">Amenities</a></li>
+          <li><a href="book-a-visit.html" class="nav-link">Book a Visit</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-contact">
+        <a href="tel:9772297772" class="phone-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          97722-97772
+        </a>
+        <span class="rera-badge">RERA No. RAJ/P/2025/3489</span>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Open Navigation Menu" id="mobileMenuBtn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer & Backdrop -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <img src="assets/logo.webp" alt="Pink Oaks Jaipur" style="height: 38px; width: auto;">
+      <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link active"><span>Home</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a></li>
+      <li><a href="address.html" class="mobile-nav-link"><span>The Address</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a></li>
+      <li><a href="residences.html" class="mobile-nav-link"><span>Residences & Floor Plans</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a></li>
+      <li><a href="amenities.html" class="mobile-nav-link"><span>Clubhouse & Amenities</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a></li>
+      <li><a href="book-a-visit.html" class="mobile-nav-link"><span>Book a Site Visit</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <a href="tel:9772297772" class="btn-primary" style="justify-content: center; width: 100%;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call 97722-97772
+      </a>
+      <div style="font-size: 0.75rem; color: var(--color-text-muted); text-align: center;">
+        RERA No. RAJ/P/2025/3489<br>Bani Park, Jaipur
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section id="hero" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content reveal-left">
+        <span class="sublabel">A Life Beyond Ordinary</span>
+        <h1 class="hero-title">An Address That Was Never For Sale.</h1>
+        <p class="hero-subtitle">Collection of just 18 exclusive 3 & 4 BHK boutique residences in Bani Park, Jaipur with Nahargarh Fort backdrop.</p>
+        <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+          <a href="book-a-visit.html" class="btn-primary">
+            Book a Site Visit
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="residences.html" class="btn-secondary">
+            Explore Residences
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal-right delay-200">
+        <div class="hero-image-frame">
+          <img src="assets/hero_building.jpg" alt="Pink Oaks Residence Building Architecture Bani Park Jaipur" class="hero-image">
+        </div>
+        <div class="hero-decor-badge">
+          <svg class="hero-decor-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+          <div class="hero-decor-text">
+            <span class="hero-decor-title">18 Boutique Residences</span>
+            <span class="hero-decor-sub">Bani Park · Jaipur</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       KEY HIGHLIGHTS STRIP
+       ========================================================================== -->
+  <section class="highlights-strip">
+    <div class="container highlights-grid">
+      <div class="stat-item reveal-up delay-100">
+        <span class="stat-number">18</span>
+        <span class="stat-label">Boutique Residences</span>
+      </div>
+
+      <div class="stat-item reveal-up delay-200">
+        <span class="stat-number">3 & 4</span>
+        <span class="stat-label">BHK Luxury Homes</span>
+      </div>
+
+      <div class="stat-item reveal-up delay-300">
+        <span class="stat-number">10 ft</span>
+        <span class="stat-label">Clear Ceilings</span>
+      </div>
+
+      <div class="stat-item reveal-up delay-400">
+        <span class="stat-number">Nahargarh</span>
+        <span class="stat-label">Historic View Backdrop</span>
+      </div>
+
+      <div class="stat-item reveal-up delay-500">
+        <span class="stat-number">Vastu</span>
+        <span class="stat-label">Certified Harmony</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       HERITAGE STORY & LOCATION INTRO
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: #F8F5F0;">
+    <div class="container two-col-grid">
+      <div class="reveal-left">
+        <span class="sublabel">Inside Bani Park</span>
+        <h2 class="section-title">Old-Money Address.<br>New-Age Home.</h2>
+        <p style="color: var(--color-text-secondary); line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.05rem;">
+          Bani Park doesn’t open up often. When it does, it doesn’t stay open long. Pink Oaks is a collection of just 18 residences in a neighbourhood Jaipur has respected for generations — the calmer side of the Pink City, with Nahargarh rising behind you and the walled city just minutes ahead.
+        </p>
+        <p style="color: var(--color-text-secondary); line-height: 1.8; font-size: 1rem; font-weight: 500;">
+          You can’t manufacture heritage. You can only build thoughtfully within it. Pink Oaks brings contemporary luxury to a neighbourhood that already has pedigree — so while your home is new, your address comes with history.
+        </p>
+      </div>
+
+      <div class="reveal-right delay-200" style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
+        <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--color-brand-pink); margin-bottom: 1.5rem;">At A Glance</h3>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.25rem;">
+          <li style="display: flex; gap: 1rem; align-items: center;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div><strong>Walled Pink City:</strong> Just 1.5 km away</div>
+          </li>
+          <li style="display: flex; gap: 1rem; align-items: center;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div><strong>MI Road & Collectorate:</strong> Approx. 1 km</div>
+          </li>
+          <li style="display: flex; gap: 1rem; align-items: center;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div><strong>Jaipur Railway Station:</strong> 2 km</div>
+          </li>
+          <li style="display: flex; gap: 1rem; align-items: center;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div><strong>Low Density:</strong> Only 3 homes share each floor</div>
+          </li>
+        </ul>
+        <a href="address.html" class="btn-primary" style="margin-top: 2rem; width: 100%; justify-content: center;">
+          View Detailed Location Map
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       WHY PINK OAKS? (5 PILLARS FROM BROCHURE)
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: white;">
+    <div class="container">
+      <div class="reveal-up" style="text-align: center; max-width: 700px; margin: 0 auto 3rem;">
+        <span class="sublabel">The Distinction</span>
+        <h2 class="section-title">Why Pink Oaks?</h2>
+        <p class="section-desc">Designed for families who don’t need to move away from the city to move up in life.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        <!-- Pillar 1 -->
+        <div class="reveal-up delay-100" style="padding: 1.75rem; background: #FAF8F5; border-radius: 8px; border-left: 4px solid var(--color-brand-pink);">
+          <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--color-brand-pink); letter-spacing: 1px;">Pillar 01</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.5rem 0 0.75rem;">Because Bani Park Is Finite.</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.7;">Land in one of Jaipur’s most established residential pockets rarely comes to market. Opportunities to own a newly built residence here are becoming increasingly uncommon.</p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="reveal-up delay-200" style="padding: 1.75rem; background: #FAF8F5; border-radius: 8px; border-left: 4px solid var(--color-brand-pink);">
+          <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--color-brand-pink); letter-spacing: 1px;">Pillar 02</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.5rem 0 0.75rem;">Because 18 Is A Number, Not A Slogan.</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.7;">No crowds. No anonymity. No endless waiting for lifts. Just a small, private community where your neighbours are names, not floor numbers.</p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="reveal-up delay-300" style="padding: 1.75rem; background: #FAF8F5; border-radius: 8px; border-left: 4px solid var(--color-brand-pink);">
+          <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--color-brand-pink); letter-spacing: 1px;">Pillar 03</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.5rem 0 0.75rem;">Because The City Comes To You.</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.7;">Temple at 100 metres. Hospital at 500 metres. Railway station at 2 kilometres. MI Road, Collectorate, cinemas and dining are all within a short drive.</p>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="reveal-up delay-400" style="padding: 1.75rem; background: #FAF8F5; border-radius: 8px; border-left: 4px solid var(--color-brand-pink);">
+          <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--color-brand-pink); letter-spacing: 1px;">Pillar 04</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.5rem 0 0.75rem;">Because Faith Travels Light.</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.7;">The old-city temples, Radha Damodar Ji (100m), Khatu Shyam Ji and Salasar Balaji routes begin almost at your doorstep.</p>
+        </div>
+
+        <!-- Pillar 5 -->
+        <div class="reveal-up delay-500" style="padding: 1.75rem; background: #FAF8F5; border-radius: 8px; border-left: 4px solid var(--color-brand-pink);">
+          <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--color-brand-pink); letter-spacing: 1px;">Pillar 05</span>
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; margin: 0.5rem 0 0.75rem;">Because Parking Shouldn’t Be A Problem.</h3>
+          <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.7;">Dedicated covered stilt parking for every residence, along with separate two-wheeler parking bays and EV charging provisions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       AESTHETIC LIFESTYLE SPOTLIGHT (FAMILY LIVING)
+       ========================================================================== -->
+  <section class="section-padding" style="background: white; border-top: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="two-col-grid">
+        <div class="reveal-left" style="position: relative;">
+          <div style="border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-lg);">
+            <img src="assets/family_living.jpg" alt="Luxury Multi-Generational Family Living at Pink Oaks" style="width: 100%; height: auto; display: block; transition: transform 0.8s ease;">
+          </div>
+          <div class="hero-decor-badge">
+            <div style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 600; line-height: 1.1; color: var(--color-brand-pink);">10 Feet Clear</div>
+            <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--color-text-muted); margin-top: 0.25rem;">Ceiling Height</div>
+          </div>
+        </div>
+
+        <div class="reveal-right delay-200">
+          <span class="sublabel">Family & Pedigree</span>
+          <h2 class="section-title">Designed For Generations To Gather.</h2>
+          <p style="color: var(--color-text-secondary); line-height: 1.8; font-size: 1.05rem; margin-bottom: 1.5rem;">
+            A home at Pink Oaks is designed for how families actually live. Grand L-shaped living halls up to 32 feet wide, expansive windows framed by natural light, and quiet private sanctuaries where memories unfold effortlessly.
+          </p>
+
+          <div class="two-col-cards" style="margin-bottom: 2rem;">
+            <div style="background: #FAF8F5; padding: 1.25rem; border-radius: 6px; border: 1px solid var(--border-light);">
+              <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--color-brand-pink); margin-bottom: 0.25rem;">3 Homes Per Floor</h4>
+              <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin: 0;">Unmatched low-density privacy for families who value peace.</p>
+            </div>
+            <div style="background: #FAF8F5; padding: 1.25rem; border-radius: 6px; border: 1px solid var(--border-light);">
+              <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--color-brand-pink); margin-bottom: 0.25rem;">4 Washrooms in 3 BHKs</h4>
+              <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin: 0;">Separate guest/powder washrooms in every single flat type.</p>
+            </div>
+          </div>
+
+          <a href="residences.html" class="btn-primary">
+            Explore Family Floor Plans
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONSTRUCTION PROGRESS SECTION (BROCHURE PAGE 17)
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: #F3EFEA; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="two-col-grid">
+        <div class="reveal-left">
+          <span class="sublabel">Construction Progress</span>
+          <h2 class="section-title">Not A Promise.<br>A Building You Can Visit.</h2>
+          <p style="color: var(--color-text-secondary); line-height: 1.8; margin-bottom: 2rem;">
+            Pink Oaks isn’t simply a render waiting to become reality. It is already rising on site — and you are welcome to walk through it before making your decision.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div style="background: white; padding: 1.25rem 1.5rem; border-radius: 6px; border-left: 4px solid #4CAF50;">
+              <span style="font-size: 0.7rem; font-weight: 700; color: #4CAF50; letter-spacing: 1px; text-transform: uppercase;">Status: Complete</span>
+              <h4 style="margin: 0.25rem 0 0.25rem; font-family: var(--font-serif); font-size: 1.2rem;">RCC Structure — Complete</h4>
+              <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin: 0;">Earthquake-resistant construction designed to Seismic Zone-IV norms.</p>
+            </div>
+
+            <div style="background: white; padding: 1.25rem 1.5rem; border-radius: 6px; border-left: 4px solid #FF9800;">
+              <span style="font-size: 0.7rem; font-weight: 700; color: #FF9800; letter-spacing: 1px; text-transform: uppercase;">Status: In Progress</span>
+              <h4 style="margin: 0.25rem 0 0.25rem; font-family: var(--font-serif); font-size: 1.2rem;">Electrical & Concealed Wiring</h4>
+              <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin: 0;">Concealed copper wiring, gas pipelines, and smart automation conduits installation.</p>
+            </div>
+
+            <div style="background: white; padding: 1.25rem 1.5rem; border-radius: 6px; border-left: 4px solid #2196F3;">
+              <span style="font-size: 0.7rem; font-weight: 700; color: #2196F3; letter-spacing: 1px; text-transform: uppercase;">Status: Underway</span>
+              <h4 style="margin: 0.25rem 0 0.25rem; font-family: var(--font-serif); font-size: 1.2rem;">Finishing Work — Underway</h4>
+              <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin: 0;">Flooring, washrooms, plaster, fittings and detailing taking shape floor by floor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal-right delay-200">
+          <div style="position: relative; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-md);">
+            <img src="assets/crafted_details.jpg" alt="Construction Workmanship Pink Oaks" style="width: 100%; height: auto; display: block;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.85)); padding: 1.5rem; color: white;">
+              <p style="font-family: var(--font-serif); font-size: 1.2rem; font-style: italic; margin-bottom: 0.5rem;">"We believe buyers should see what they are investing in."</p>
+              <p style="font-size: 0.85rem; opacity: 0.9; margin: 0 0 1rem;">Come see the workmanship. Come see the progress.</p>
+              <a href="book-a-visit.html" class="btn-primary" style="background: var(--color-brand-pink); border-color: var(--color-brand-pink);">
+                Schedule Walkthrough
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       VASTU CERTIFICATION SPOTLIGHT
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: white;">
+    <div class="container">
+      <div class="two-col-grid">
+        <div class="reveal-left">
+          <span class="sublabel">Harmony & Prosperity</span>
+          <h2 class="section-title">Thoughtfully Vastu-Aligned</h2>
+          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--color-text-secondary); margin-bottom: 2rem;">
+            Every residence at Pink Oaks has been planned and refined for complete Vastu compliance by <strong>265 Degree Consultants</strong>, ensuring natural light, balanced energy flow, and sacred space planning.
+          </p>
+
+          <div class="two-col-cards" style="margin-bottom: 2rem;">
+            <div style="padding: 1.25rem; background: #FAF8F5; border-radius: 8px; border: 1px solid var(--border-light);">
+              <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; color: var(--color-text-primary);">Manjusha Installation</h4>
+              <p style="font-size: 0.8rem; color: var(--color-text-secondary); margin: 0;">Concealed positive energy embedding</p>
+            </div>
+            <div style="padding: 1.25rem; background: #FAF8F5; border-radius: 8px; border: 1px solid var(--border-light);">
+              <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; color: var(--color-text-primary);">Bar-Chart Balancing</h4>
+              <p style="font-size: 0.8rem; color: var(--color-text-secondary); margin: 0;">Element and zone energy alignment</p>
+            </div>
+            <div style="padding: 1.25rem; background: #FAF8F5; border-radius: 8px; border: 1px solid var(--border-light);">
+              <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; color: var(--color-text-primary);">Structural Balancing</h4>
+              <p style="font-size: 0.8rem; color: var(--color-text-secondary); margin: 0;">Harmonized spatial proportions</p>
+            </div>
+            <div style="padding: 1.25rem; background: #FAF8F5; border-radius: 8px; border: 1px solid var(--border-light);">
+              <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; color: var(--color-text-primary);">Energy Optimisation</h4>
+              <p style="font-size: 0.8rem; color: var(--color-text-secondary); margin: 0;">Natural light and air circulation</p>
+            </div>
+          </div>
+
+          <p style="font-family: var(--font-serif); font-size: 1.2rem; font-style: italic; color: var(--color-brand-pink); margin: 0;">
+            "Every detail is aligned towards harmony, positivity and prosperity."
+          </p>
+        </div>
+
+        <div class="reveal-right delay-200">
+          <div style="border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-lg);">
+            <img src="assets/vastu_sanctuary.jpg" alt="Vastu Sanctuary & Puja Room Pink Oaks" style="width: 100%; height: auto; display: block;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION PREVIEW TEASERS
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: #EFECE6; border-top: 1px solid var(--border-light);">
+    <div class="container three-col-grid">
+      <div class="reveal-up delay-100" style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-light);">
+        <span class="sublabel">Location</span>
+        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.75rem; text-transform: uppercase;">The Address</h3>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">1.5 km to Walled Pink City, 1 km to MI Road, 100 m to Radha Damodar Ji Temple. Connected to everyday essentials.</p>
+        <a href="address.html" class="btn-primary" style="padding: 0.75rem 1.25rem; font-size: 0.75rem;">Explore Location →</a>
+      </div>
+
+      <div class="reveal-up delay-200" style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-light);">
+        <span class="sublabel">Residences</span>
+        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.75rem; text-transform: uppercase;">3 & 4 BHK Layouts</h3>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">Generous layouts (2,170 – 2,635 sq.ft. sale area), 10-ft ceilings, cross ventilation & 4 washrooms in 3 BHKs.</p>
+        <a href="residences.html" class="btn-primary" style="padding: 0.75rem 1.25rem; font-size: 0.75rem;">View Floor Plans →</a>
+      </div>
+
+      <div class="reveal-up delay-300" style="background: white; padding: 2rem; border-radius: 8px; border: 1px solid var(--border-light);">
+        <span class="sublabel">Basement Clubhouse</span>
+        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.75rem; text-transform: uppercase;">The Private Life</h3>
+        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">Private Home Theatre, Music Room, Billiards, Table Tennis, Library, Yoga Studio & Banquet Hall.</p>
+        <a href="amenities.html" class="btn-primary" style="padding: 0.75rem 1.25rem; font-size: 0.75rem;">Explore Amenities →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INTERACTIVE LOCATION MAP SECTION (HOME PAGE)
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: #FAF8F5; border-top: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="reveal-up" style="text-align: center; max-width: 750px; margin: 0 auto 3rem;">
+        <span class="sublabel">Bani Park · Jaipur</span>
+        <h2 class="section-title">An Address That Needs No Introduction.</h2>
+        <p class="section-desc">Centered in Jaipur’s most respected heritage residential enclave, connected to culture, dining, transport, and peaceful green avenues.</p>
+      </div>
+
+      <div style="position: relative; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--border-light);">
+        <div id="homeLeafletMap" style="height: 440px; width: 100%;"></div>
+      </div>
+
+      <div class="four-col-grid" style="margin-top: 2rem; text-align: center;">
+        <div style="padding: 1.25rem; background: white; border-radius: 8px; border: 1px solid var(--border-light);">
+          <div style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; color: var(--color-brand-pink);">1.5 km</div>
+          <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--color-text-primary); margin-top: 0.25rem;">Walled Pink City</div>
+        </div>
+        <div style="padding: 1.25rem; background: white; border-radius: 8px; border: 1px solid var(--border-light);">
+          <div style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; color: var(--color-brand-pink);">1 km</div>
+          <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--color-text-primary); margin-top: 0.25rem;">MI Road Corridor</div>
+        </div>
+        <div style="padding: 1.25rem; background: white; border-radius: 8px; border: 1px solid var(--border-light);">
+          <div style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; color: var(--color-brand-pink);">2 km</div>
+          <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--color-text-primary); margin-top: 0.25rem;">Railway Station</div>
+        </div>
+        <div style="padding: 1.25rem; background: white; border-radius: 8px; border: 1px solid var(--border-light);">
+          <div style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; color: var(--color-brand-pink);">100 m</div>
+          <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--color-text-primary); margin-top: 0.25rem;">Radha Damodar Temple</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TRUST & APPROVALS STRIP
+       ========================================================================== -->
+  <section style="background-color: #1B382B; color: #FFFFFF; padding: 3.5rem 0; border-top: 1px solid var(--border-light);">
+    <div class="container four-col-grid" style="text-align: center;">
+      <div style="padding: 1.25rem; background: rgba(255, 255, 255, 0.06); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.12);">
+        <div style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--color-brand-pink); letter-spacing: 1.5px; margin-bottom: 0.4rem;">RERA Registered</div>
+        <div style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 600; color: #FFFFFF; letter-spacing: 0.5px;">RAJ/P/2025/3489</div>
+      </div>
+      <div style="padding: 1.25rem; background: rgba(255, 255, 255, 0.06); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.12);">
+        <div style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--color-brand-pink); letter-spacing: 1.5px; margin-bottom: 0.4rem;">Bank Approval</div>
+        <div style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 600; color: #FFFFFF; letter-spacing: 0.5px;">Approved by Leading Banks</div>
+      </div>
+      <div style="padding: 1.25rem; background: rgba(255, 255, 255, 0.06); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.12);">
+        <div style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--color-brand-pink); letter-spacing: 1.5px; margin-bottom: 0.4rem;">Vastu Certification</div>
+        <div style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 600; color: #FFFFFF; letter-spacing: 0.5px;">265 Degree Consultants</div>
+      </div>
+      <div style="padding: 1.25rem; background: rgba(255, 255, 255, 0.06); border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.12);">
+        <div style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--color-brand-pink); letter-spacing: 1.5px; margin-bottom: 0.4rem;">Direct Inquiry</div>
+        <div style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 600; color: #FFFFFF; letter-spacing: 0.5px;">
+          <a href="tel:9772297772" style="color: #FFFFFF; text-decoration: none;">+91 97722-97772</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER SECTION
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="reveal-up delay-100">
+          <a href="index.html" class="logo-group" style="margin-bottom: 1.25rem;">
+            <img src="assets/logo.webp" alt="Pink Oaks Bani Park Jaipur" class="brand-logo-img" style="height: 48px; filter: brightness(0.95);">
+          </a>
+          <p class="footer-link" style="max-width: 280px; line-height: 1.6;">
+            Exclusive collection of 18 boutique luxury residences in Jaipur's respected Bani Park neighbourhood.
+          </p>
+        </div>
+
+        <div class="reveal-up delay-200">
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="address.html" class="footer-link">Address</a></li>
+            <li><a href="residences.html" class="footer-link">Residences</a></li>
+            <li><a href="amenities.html" class="footer-link">Amenities</a></li>
+            <li><a href="book-a-visit.html" class="footer-link">Book a Visit</a></li>
+          </ul>
+        </div>
+
+        <div class="reveal-up delay-300">
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:9772297772" style="color: inherit; text-decoration: none;">97722-97772</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="https://www.rera.rajasthan.gov.in" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">www.rera.rajasthan.gov.in</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Bani Park, Jaipur, Rajasthan
+          </div>
+        </div>
+
+        <div class="reveal-up delay-400">
+          <div class="footer-col-title">RERA Details</div>
+          <p class="footer-rera-note">
+            RERA No. RAJ/P/2025/3489<br>
+            Fully registered. Fully transparent. Approved by leading banks.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2025 Pink Oaks. All rights reserved. Price on request.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Mobile Quick Action Bar -->
+  <div class="mobile-bottom-bar" aria-label="Quick Actions">
+    <a href="tel:9772297772" class="bottom-bar-btn bottom-bar-btn-call">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Now
+    </a>
+    <a href="book-a-visit.html" class="bottom-bar-btn bottom-bar-btn-visit">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+      Book Visit
+    </a>
+  </div>
+
+  <div class="toast" id="toastNotification">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <span id="toastMessage">Welcome to Pink Oaks Jaipur</span>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+

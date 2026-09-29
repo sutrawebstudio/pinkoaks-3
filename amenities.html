@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Private Life & Specifications — Amenities | Pink Oaks</title>
+  <meta name="description" content="Explore basement clubhouse amenities at Pink Oaks Bani Park, Jaipur - Home Theatre, Music Room, Billiards, Library, Yoga Studio, EV charging & full technical specs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER / NAVIGATION BAR
+       ========================================================================== -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-group" aria-label="Pink Oaks Jaipur Home">
+        <img src="assets/logo.webp" alt="Pink Oaks Bani Park Jaipur" class="brand-logo-img">
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="address.html" class="nav-link">Address</a></li>
+          <li><a href="residences.html" class="nav-link">Residences</a></li>
+          <li><a href="amenities.html" class="nav-link active">Amenities</a></li>
+          <li><a href="book-a-visit.html" class="nav-link">Book a Visit</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-contact">
+        <a href="tel:9772297772" class="phone-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          97722-97772
+        </a>
+        <span class="rera-badge">RERA No. RAJ/P/2025/3489</span>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Open Navigation Menu" id="mobileMenuBtn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer & Backdrop -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <img src="assets/logo.webp" alt="Pink Oaks Jaipur" style="height: 38px; width: auto;">
+      <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link"><span>Home</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a></li>
+      <li><a href="address.html" class="mobile-nav-link"><span>The Address</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a></li>
+      <li><a href="residences.html" class="mobile-nav-link"><span>Residences & Floor Plans</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a></li>
+      <li><a href="amenities.html" class="mobile-nav-link active"><span>Clubhouse & Amenities</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a></li>
+      <li><a href="book-a-visit.html" class="mobile-nav-link"><span>Book a Site Visit</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <a href="tel:9772297772" class="btn-primary" style="justify-content: center; width: 100%;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call 97722-97772
+      </a>
+      <div style="font-size: 0.75rem; color: var(--color-text-muted); text-align: center;">
+        RERA No. RAJ/P/2025/3489<br>Bani Park, Jaipur
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       PAGE HERO
+       ========================================================================== -->
+  <section class="section-padding" style="background: linear-gradient(135deg, #F8F5F0 0%, #EFECE5 100%); border-bottom: 1px solid var(--border-light);">
+    <div class="container reveal-up">
+      <span class="sublabel">The Private Life</span>
+      <h1 class="section-title" style="font-size: clamp(2rem, 5vw, 3.8rem);">18 Homes. An Entire World Downstairs.</h1>
+      <p class="section-desc" style="max-width: 700px; font-size: 1.15rem; color: var(--color-text-primary); font-weight: 500; margin-left: 0;">
+        "An entire clubhouse, one floor below home." At Pink Oaks, leisure doesn't require stepping outside the building.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BASEMENT CLUBHOUSE HIGHLIGHTS
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: white;">
+    <div class="container">
+      <div class="reveal-up" style="text-align: center; max-width: 750px; margin: 0 auto 3rem;">
+        <span class="sublabel">Basement Leisure Floor Plan</span>
+        <h2 class="section-title">Built Into The Foundation.</h2>
+        <p class="section-desc">A complete private leisure level reserved exclusively for the residents of just 18 homes.</p>
+      </div>
+
+      <div class="three-col-grid">
+        <div class="reveal-up delay-100" style="padding: 2rem; background: #FAF8F5; border-radius: 8px; border: 1px solid var(--border-light);">
+          <div style="color: var(--color-brand-pink); margin-bottom: 1rem;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 0.75rem;">Home Theatre</h3>
+          <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.6;">
+            Cinema at its finest. Private home theatre within the basement clubhouse bringing elegance, comfort, and technology together for movie nights & match days.
+          </p>
+        </div>
+
+        <div class="reveal-up delay-200" style="padding: 2rem; background: #FAF8F5; border-radius: 8px; border: 1px solid var(--border-light);">
+          <div style="color: var(--color-brand-pink); margin-bottom: 1rem;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          </div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 0.75rem;">Music Room & Library</h3>
+          <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.6;">
+            Dedicated acoustic spaces for musical sessions and quiet reading nooks for personal reflection and study.
+          </p>
+        </div>
+
+        <div class="reveal-up delay-300" style="padding: 2rem; background: #FAF8F5; border-radius: 8px; border: 1px solid var(--border-light);">
+          <div style="color: var(--color-brand-pink); margin-bottom: 1rem;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/></svg>
+          </div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 0.75rem;">Games Room & Billiards</h3>
+          <p style="font-size: 0.9rem; color: var(--color-text-secondary); line-height: 1.6;">
+            Play hard. Relax harder. Sophisticated setting with billiards, table tennis, and indoor games for effortless unwinding.
+          </p>
+        </div>
+      </div>
+
+      <!-- Clubhouse Feature Banner Image -->
+      <div class="reveal-up delay-400" style="margin-top: 3rem; position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-lg);">
+        <img src="assets/clubhouse_lounge.jpg" alt="Pink Oaks Luxury Clubhouse Library & Billiards Lounge" style="width: 100%; height: 380px; object-fit: cover; display: block;">
+        <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, transparent 100%); display: flex; align-items: center; padding: 2.5rem 1.5rem; color: white;">
+          <div style="max-width: 500px;">
+            <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--color-brand-pink);">Private Hospitality</span>
+            <h3 style="font-family: var(--font-serif); font-size: clamp(1.6rem, 3.5vw, 2.2rem); margin: 0.5rem 0 1rem; color: white;">A World Of Low-Key Sophistication.</h3>
+            <p style="font-size: 0.95rem; opacity: 0.9; line-height: 1.7; margin-bottom: 1.5rem;">
+              Whether entertaining guests in the multipurpose hall or sinking into a leather armchair in the library lounge, the basement clubhouse is your private extended sanctuary.
+            </p>
+            <a href="book-a-visit.html" class="btn-primary">
+              Book A Private Tour
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       AMENITIES LIST GRID WITH SVG ICONS & CATEGORY FILTERING
+       ========================================================================== -->
+  <section class="section-padding amenities-section" style="background-color: #F8F5F0; border-top: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="reveal-up" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 2.5rem;">
+        <div>
+          <span class="sublabel">Full Offerings</span>
+          <h2 class="section-title" style="margin-bottom: 0;">Everything Close Enough To Feel Like Home.</h2>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="amenity-tabs" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button class="amenity-tab-btn active" onclick="filterAmenities('all', this)" style="padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; background: var(--color-brand-pink); color: white; transition: var(--transition-fast);">All Offerings</button>
+          <button class="amenity-tab-btn" onclick="filterAmenities('leisure', this)" style="padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; background: white; border: 1px solid var(--border-light); color: var(--color-text-secondary); transition: var(--transition-fast);">Clubhouse & Leisure</button>
+          <button class="amenity-tab-btn" onclick="filterAmenities('infrastructure', this)" style="padding: 0.5rem 1.25rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; background: white; border: 1px solid var(--border-light); color: var(--color-text-secondary); transition: var(--transition-fast);">Infrastructure & Utility</button>
+        </div>
+      </div>
+
+      <div class="three-col-grid" id="amenitiesGrid">
+        <div class="amenity-card-item reveal-up delay-100" data-category="leisure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">Home Theatre</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-100" data-category="leisure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">Music Room</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-150" data-category="leisure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">Billiards & Table Tennis</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-150" data-category="leisure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">Indoor Games Zone</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-200" data-category="leisure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">Library & Reading Lounge</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-200" data-category="leisure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9z"/><path d="M12 3a9 9 0 0 0-9 9"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">Yoga & Wellness Studio</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-250" data-category="leisure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">Multipurpose / Banquet Hall</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-250" data-category="leisure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">Conference Room</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-300" data-category="leisure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">Kids’ Play Area</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-300" data-category="leisure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">On-Site Temple</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-350" data-category="infrastructure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">Storage for Flats</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-350" data-category="infrastructure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">EV-Charging Provision</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-400" data-category="infrastructure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">Water Softener Plant</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-400" data-category="infrastructure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">Pressure Pump System</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-450" data-category="infrastructure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">Concealed Gas Pipeline</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-450" data-category="infrastructure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26C17.81 13.47 19 11.38 19 9a7 7 0 0 0-7-7z"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">Smart Washroom Lighting</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-500" data-category="infrastructure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">Intercom & TV Circuits</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-500" data-category="infrastructure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">Naturally Lit & Ventilated</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-550" data-category="infrastructure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">Large Usable Balconies</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-550" data-category="infrastructure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">Anti-Skid Ceramic Tiles</span>
+        </div>
+
+        <div class="amenity-card-item reveal-up delay-600" data-category="infrastructure" style="background: white; padding: 1.25rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-light); display: flex; align-items: center; gap: 1rem; transition: var(--transition-bounce);">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(196,107,133,0.12); display: flex; align-items: center; justify-content: center; color: var(--color-brand-pink); flex-shrink: 0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <span style="font-weight: 600; color: var(--color-text-primary); font-size: 0.95rem;">Anti-Termite Treatment</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TECHNICAL SPECIFICATIONS TABLE (BROCHURE PAGES 19-20)
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: white;">
+    <div class="container">
+      <div class="reveal-up" style="margin-bottom: 3rem;">
+        <span class="sublabel">Building Quality</span>
+        <h2 class="section-title">Specifications</h2>
+        <p style="color: var(--color-text-secondary); font-size: 1rem;">
+          "Every material here was chosen to be lived with for decades — not merely to photograph well for a brochure."
+        </p>
+      </div>
+
+      <div class="two-col-grid" style="align-items: start;">
+        <!-- Specs Column 1 -->
+        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div style="padding: 1.25rem; background: #FAF8F5; border-radius: 6px; border-left: 3px solid var(--color-brand-pink);">
+            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--color-text-primary); margin-bottom: 0.4rem;">SAFETY & STRUCTURE</h4>
+            <p style="font-size: 0.9rem; color: var(--color-text-secondary); margin: 0;">RCC framed, earthquake-resistant structure designed for Seismic Zone-IV norms.</p>
+          </div>
+
+          <div style="padding: 1.25rem; background: #FAF8F5; border-radius: 6px; border-left: 3px solid var(--color-brand-pink);">
+            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--color-text-primary); margin-bottom: 0.4rem;">SECURITY</h4>
+            <p style="font-size: 0.9rem; color: var(--color-text-secondary); margin: 0;">CCTV surveillance · Intercom connectivity · 24-hour guard security manned room.</p>
+          </div>
+
+          <div style="padding: 1.25rem; background: #FAF8F5; border-radius: 6px; border-left: 3px solid var(--color-brand-pink);">
+            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--color-text-primary); margin-bottom: 0.4rem;">WATER SUPPLY & HARVESTING</h4>
+            <p style="font-size: 0.9rem; color: var(--color-text-secondary); margin: 0;">24-hour water supply · Rainwater harvesting · Central Water Softener · Pressure pump system.</p>
+          </div>
+
+          <div style="padding: 1.25rem; background: #FAF8F5; border-radius: 6px; border-left: 3px solid var(--color-brand-pink);">
+            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--color-text-primary); margin-bottom: 0.4rem;">ELECTRICAL & BACKUP</h4>
+            <p style="font-size: 0.9rem; color: var(--color-text-secondary); margin: 0;">Silent DG power backup for common areas · Dedicated Transformer · Common-area light fixtures · TV / Telephone / AC points.</p>
+          </div>
+        </div>
+
+        <!-- Specs Column 2 -->
+        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div style="padding: 1.25rem; background: #FAF8F5; border-radius: 6px; border-left: 3px solid var(--color-brand-pink);">
+            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--color-text-primary); margin-bottom: 0.4rem;">LIVING & DINING</h4>
+            <p style="font-size: 0.9rem; color: var(--color-text-secondary); margin: 0;">POP-finished walls and ceiling · Premium Acrylic Emulsion paint · AC provision · High-grade Vitrified-tile flooring.</p>
+          </div>
+
+          <div style="padding: 1.25rem; background: #FAF8F5; border-radius: 6px; border-left: 3px solid var(--color-brand-pink);">
+            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--color-text-primary); margin-bottom: 0.4rem;">BEDROOMS & DOORS</h4>
+            <p style="font-size: 0.9rem; color: var(--color-text-secondary); margin: 0;">Vitrified flooring · UPVC / Aluminium windows · Solid wooden main doors & flush internal doors · POP finish with acrylic emulsion.</p>
+          </div>
+
+          <div style="padding: 1.25rem; background: #FAF8F5; border-radius: 6px; border-left: 3px solid var(--color-brand-pink);">
+            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--color-text-primary); margin-bottom: 0.4rem;">KITCHEN</h4>
+            <p style="font-size: 0.9rem; color: var(--color-text-secondary); margin: 0;">Modular kitchen · Concealed copper gas pipeline · Separate utility balcony · Granite working top · Stainless Steel sink · 2-ft tile dado above counter.</p>
+          </div>
+
+          <div style="padding: 1.25rem; background: #FAF8F5; border-radius: 6px; border-left: 3px solid var(--color-brand-pink);">
+            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--color-text-primary); margin-bottom: 0.4rem;">TOILETS & FINISHES</h4>
+            <p style="font-size: 0.9rem; color: var(--color-text-secondary); margin: 0;">Premium tiles, fittings and sanitaryware · Anti-skid ceramic flooring · Smart washroom lighting.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER SECTION
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="reveal-up delay-100">
+          <a href="index.html" class="logo-group" style="margin-bottom: 1.25rem;">
+            <img src="assets/logo.webp" alt="Pink Oaks Bani Park Jaipur" class="brand-logo-img" style="height: 48px; filter: brightness(0.95);">
+          </a>
+          <p class="footer-link" style="max-width: 280px; line-height: 1.6;">
+            Exclusive low-density luxury living in Jaipur's most heritage-rich neighborhood.
+          </p>
+        </div>
+
+        <div class="reveal-up delay-200">
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="address.html" class="footer-link">Address</a></li>
+            <li><a href="residences.html" class="footer-link">Residences</a></li>
+            <li><a href="amenities.html" class="footer-link">Amenities</a></li>
+            <li><a href="book-a-visit.html" class="footer-link">Book a Visit</a></li>
+          </ul>
+        </div>
+
+        <div class="reveal-up delay-300">
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:9772297772" style="color: inherit; text-decoration: none;">97722-97772</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="https://www.rera.rajasthan.gov.in" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">www.rera.rajasthan.gov.in</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Bani Park, Jaipur, Rajasthan
+          </div>
+        </div>
+
+        <div class="reveal-up delay-400">
+          <div class="footer-col-title">RERA Details</div>
+          <p class="footer-rera-note">
+            RERA No. RAJ/P/2025/3489<br>
+            Fully registered. Fully transparent. Approved by leading banks.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2025 Pink Oaks. All rights reserved. Price on request.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Mobile Quick Action Bar -->
+  <div class="mobile-bottom-bar" aria-label="Quick Actions">
+    <a href="tel:9772297772" class="bottom-bar-btn bottom-bar-btn-call">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Now
+    </a>
+    <a href="book-a-visit.html" class="bottom-bar-btn bottom-bar-btn-visit">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+      Book Visit
+    </a>
+  </div>
+
+  <div class="toast" id="toastNotification">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <span id="toastMessage">Filtering amenities...</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
